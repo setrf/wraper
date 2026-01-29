@@ -56,6 +56,22 @@ data/
         └── YYYY-MM-DD-hackernews.md
 ```
 
+The output file contains:
+- Title (with link)
+- Points
+- Comment count
+- Text/Description (if available, e.g., for "Ask HN" posts)
+
+## Development
+
+### Running Tests
+
+This project uses `pytest` for testing. To run the tests:
+
+```bash
+pytest
+```
+
 ## Project Structure
 
 - `wraper/`
@@ -64,6 +80,7 @@ data/
     - `storage.py`: Logic for file system operations and saving data.
     - `sources/`: Modules for different data sources.
         - `hackernews.py`: Fetcher for Hacker News.
+- `tests/`: Unit tests for the project.
 
 ## Contributing
 
