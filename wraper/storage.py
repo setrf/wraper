@@ -33,12 +33,15 @@ def save_items(source_name: str, items: list):
         # specific for HN but generic enough
         points = item.get('score', 0)
         comments = item.get('descendants', 0)
+        text = item.get('text', '')
         
         content += f"### [{title}]({url})\n"
         if 'score' in item:
             content += f"- **Points**: {points}\n"
         if 'descendants' in item:
             content += f"- **Comments**: {comments}\n"
+        if text:
+            content += f"\n{text}\n"
         content += "\n---\n\n"
         
     with open(file_path, 'w', encoding='utf-8') as f:

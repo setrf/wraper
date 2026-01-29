@@ -26,7 +26,7 @@ class TestStorage(unittest.TestCase):
         
         items = [
             {"title": "Story 1", "url": "http://one.com", "score": 10, "descendants": 5},
-            {"title": "Story 2", "url": "http://two.com"}
+            {"title": "Story 2", "url": "http://two.com", "text": "This is a description."}
         ]
         
         save_items("testsource", items)
@@ -45,3 +45,4 @@ class TestStorage(unittest.TestCase):
         self.assertIn("[Story 1](http://one.com)", written_content)
         self.assertIn("**Points**: 10", written_content)
         self.assertIn("[Story 2](http://two.com)", written_content)
+        self.assertIn("This is a description.", written_content)
