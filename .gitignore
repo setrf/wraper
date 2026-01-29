@@ -1,2 +1,3 @@
 __pycache__/\n*.pyc\n.env\nvenv/
 \ndata/\n*.egg-info/\ndist/\nbuild/
+\n.DS_Store
